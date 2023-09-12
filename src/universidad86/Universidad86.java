@@ -5,6 +5,9 @@
  */
 package universidad86;
 
+import java.sql.Connection;
+import universidad86.AccesoADatos.Conexion;
+
 /**
  *
  * @author dea
@@ -16,6 +19,7 @@ public class Universidad86 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Connection con=Conexion.getConexion();
     }
     
 }
