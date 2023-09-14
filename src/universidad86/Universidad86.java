@@ -6,7 +6,11 @@
 package universidad86;
 
 import java.sql.Connection;
+import java.time.LocalDate;
+import java.time.Month;
+import universidad86.AccesoADatos.AlumnoData;
 import universidad86.AccesoADatos.Conexion;
+import universidad86.entidades.Alumno;
 
 /**
  *
@@ -20,6 +24,9 @@ public class Universidad86 {
     public static void main(String[] args) {
         // TODO code application logic here
         Connection con=Conexion.getConexion();
+        Alumno juan= new Alumno(238421221,"Lopez","Juan",LocalDate.of(2000, 5, 7),true);
+        AlumnoData alu= new AlumnoData();
+        alu.guardarAlumno(juan);
     }
     
 }
